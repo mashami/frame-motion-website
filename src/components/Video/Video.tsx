@@ -37,42 +37,39 @@ const Video = ({
   }
 
   return (
-    <>
-      <div
-        ref={containRef}
-        className={`relative overflow-hidden group cursor-pointer -z-0 bg-red-500 ${className}`}
-        style={{
-          height: height,
-          width: width
-        }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <Image
-          alt="Image"
-          src={`/${imageUrl}`}
-          fill
-          style={{ objectFit: "cover" }}
-          className={`transition-opacity duration-300 ${
-            isPlay ? "hidden" : "block"
-          }`}
-        />
+    <div
+      ref={containRef}
+      className={`relative overflow-hidden group cursor-pointer -z-0 ${className}`}
+      style={{
+        height: height,
+        width: width
+      }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Image
+        alt="Image"
+        src={`/${imageUrl}`}
+        fill
+        style={{ objectFit: "cover" }}
+        className={`transition-opacity duration-300 ${
+          isPlay ? "hidden" : "block"
+        }`}
+      />
 
-        <video
-          ref={videoRef}
-          src={`/${videoUrl}`}
-          playsInline
-          loop
-          onPlay={() => true}
-          muted
-          style={{ objectFit: "cover" }}
-          className={`absolute w-full h-full transition-opacity duration-300 ${
-            isPlay ? "block" : "hidden"
-          }`}
-        />
-      </div>
-      {/* <StickyCursor ref={ref} text={"View"} /> */}
-    </>
+      <video
+        ref={videoRef}
+        src={`/${videoUrl}`}
+        playsInline
+        loop
+        onPlay={() => true}
+        muted
+        style={{ objectFit: "cover" }}
+        className={`absolute w-full h-full transition-opacity duration-300 ${
+          isPlay ? "block" : "hidden"
+        }`}
+      />
+    </div>
   )
 }
 
