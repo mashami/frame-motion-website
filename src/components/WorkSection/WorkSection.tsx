@@ -80,9 +80,8 @@ const WorkSection = () => {
               height="450px"
               width="100%"
               imageUrl="image2.webp"
-              videoUrl="Video2.mp4"
+              videoUrl="video2.mp4"
             />
-            {/* <StickyCursor ref={mouseRef} text={"View"} /> */}
           </div>
         </div>
       </div>
@@ -93,7 +92,7 @@ const WorkSection = () => {
             height="300px"
             width="250px"
             imageUrl="image4.webp"
-            videoUrl="Video4.mp4"
+            videoUrl="video4.mp4"
           />
         </motion.div>
 
